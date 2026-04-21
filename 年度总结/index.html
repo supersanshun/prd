@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+    <title>2025 年度回顾</title>
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <div class="stage-glow stage-glow-a"></div>
+    <div class="stage-glow stage-glow-b"></div>
+
+    <main class="prototype-stage">
+      <section class="phone-shell">
+        <div class="phone-notch"></div>
+
+        <div class="phone-status">
+          <span>9:41</span>
+          <span>5G · 86%</span>
+        </div>
+
+        <section class="entry-screen" id="entryScreen">
+          <div class="entry-hero">
+            <p class="eyebrow">Enterprise Annual Report</p>
+            <h1>2025 年度回顾</h1>
+            <p class="entry-copy">
+              这一页，记录你在 2025 年每一次认真投入的时刻。我们把这一年的忙碌、坚持与协同，整理成一份更有温度的回顾。
+            </p>
+          </div>
+
+          <div class="entry-badges">
+            <span class="soft-badge">送给每一位同事</span>
+            <span class="soft-badge">完整年度记录</span>
+            <span class="soft-badge">移动端回顾页</span>
+          </div>
+
+          <div class="entry-card">
+            <div class="entry-card-head">
+              <div>
+                <p class="mini-label">致</p>
+                <strong id="employeeName">-</strong>
+              </div>
+              <span class="status-pill">已准备好</span>
+            </div>
+
+            <dl class="entry-facts" id="entryFacts"></dl>
+          </div>
+
+          <div class="entry-summary" id="entrySummary"></div>
+
+          <button class="primary-btn wide-btn" id="enterReportBtn">开启我的年度回顾</button>
+        </section>
+
+        <section class="report-screen hidden" id="reportScreen">
+          <header class="report-topbar">
+            <button class="icon-btn" id="backToEntryBtn" aria-label="返回入口">‹</button>
+            <div class="topbar-copy">
+              <p class="mini-label">华域协同</p>
+              <h2 id="slideTitle">年度回顾</h2>
+            </div>
+            <button class="icon-btn" id="openShareBtn" aria-label="打开分享">分享</button>
+          </header>
+
+          <div class="progress-row">
+            <div class="progress-dots" id="progressDots"></div>
+            <span class="progress-label" id="progressLabel">1 / 1</span>
+          </div>
+
+          <article class="story-card" id="storyCard" aria-live="polite"></article>
+
+          <footer class="story-footer">
+            <button class="secondary-btn" id="prevBtn">上一页</button>
+            <div class="footer-actions">
+              <button class="ghost-btn" id="moduleOverviewBtn">更多细节</button>
+              <button class="primary-btn" id="nextBtn">下一页</button>
+            </div>
+          </footer>
+        </section>
+      </section>
+    </main>
+
+    <div class="sheet-overlay hidden" id="sheetOverlay"></div>
+
+    <section class="bottom-sheet hidden" id="moduleSheet" aria-hidden="true">
+      <div class="sheet-handle"></div>
+        <div class="sheet-head">
+          <div>
+          <p class="mini-label">年度片段</p>
+          <h3 id="moduleSheetTitle">更多细节</h3>
+        </div>
+        <button class="icon-btn subtle-btn" data-close-sheet="moduleSheet" aria-label="关闭">×</button>
+      </div>
+      <div class="sheet-body" id="moduleSheetBody"></div>
+    </section>
+
+    <section class="bottom-sheet hidden" id="shareSheet" aria-hidden="true">
+      <div class="sheet-handle"></div>
+      <div class="sheet-head">
+        <div>
+          <p class="mini-label">分享这一年</p>
+          <h3>回顾海报预览</h3>
+        </div>
+        <button class="icon-btn subtle-btn" data-close-sheet="shareSheet" aria-label="关闭">×</button>
+      </div>
+      <div class="sheet-body">
+        <div class="poster-preview" id="posterPreview"></div>
+        <div class="share-actions">
+          <button class="share-btn" data-share-action="wechat">分享给同事</button>
+          <button class="share-btn" data-share-action="poster">生成回顾长图</button>
+          <button class="share-btn" data-share-action="download">下载 PDF</button>
+        </div>
+      </div>
+    </section>
+
+    <div class="toast hidden" id="toast"></div>
+
+    <script src="./script.js"></script>
+  </body>
+</html>
